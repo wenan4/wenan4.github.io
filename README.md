@@ -1,2 +1,12 @@
-# wenan4.github.io
-The homepage of wenan.
+# 欢迎来到我的主页 🎉
+
+这是我借助 Docsify 搭建的极简笔记网站！
+
+## 关于我
+你好！可以称呼我为吻安。我正在学习如何使用 GitHub 搭建个人主页。
+这是我的第一篇文章。
+
+## 记录一些日常
+- [x] 创建 GitHub 仓库
+- [x] 写了第一行 HTML 代码
+- [x] 成功套用了 Docsify 模板！
