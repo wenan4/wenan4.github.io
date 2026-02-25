@@ -2,20 +2,85 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wenan4的笔记空间</title>
+  <title>wenan4的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 引入一套非常漂亮的、类似官方文档的主题样式 -->
+  <!-- 引入 Docsify 的 Vue 主题 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  
+  <style>
+    /* ================= 1. 背景图片设置 ================= */
+    body {
+      /* 把 url() 里面的名字换成你的背景图片文件名，比如 bg.jpg */
+      background-image: url('aniya.png');
+      background-size: cover;       /* 让图片铺满整个屏幕 */
+      background-attachment: fixed; /* 页面滚动时背景图不动 */
+      background-position: center;
+    }
+
+    /* 为了防止背景图太花导致文字看不清，给文字区域加一层半透明的白色底 */
+    main {
+      background-color: rgba(255, 255, 255, 0.85); /* 0.85是透明度，可自行修改 */
+    }
+    .sidebar {
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* ================= 2. 头像样式设置 ================= */
+    /* 把左上角的方形头像变成圆角的，更好看 */
+    .app-name-link img {
+      width: 80px;         /* 头像大小 */
+      border-radius: 50%;  /* 变成圆形 */
+      margin-bottom: 10px;
+    }
+
+    /* ================= 3. 音乐播放器位置 ================= */
+    /* 把音乐播放器固定在页面左下角 */
+    #music-player {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9999;
+      width: 260px;
+    }
+  </style>
 </head>
 <body>
-  <div id="app">网页正在加载中，请稍候...</div>
+  <div id="app">网页加载中，请稍候...</div>
+<!-- 
+  <!-- ================= 音乐播放器 ================= -->
+  <!-- controls 表示显示播放面板，loop 表示循环播放 -->
+<!--   <audio id="music-player" controls loop> -->
+    <!-- 把这里的 src 换成你的本地音乐文件名，比如 music.mp3 -->
+   <!--  <source src="你的音乐链接.mp3" type="audio/mpeg"> -->
+<!--   </audio> -->
+
   <script>
     window.$docsify = {
-      name: 'wenan4的笔记',      // 网页左上角显示的名字
-      repo: 'wenan4/wenan4.github.io'  // 网页右上角会显示一个挂件，跳转回你的源码
+      // ================= 基础信息设置 =================
+      name: 'wenan4 的笔记', // 左上角的名字
+      logo: 'neko.png',    // 左上角的头像文件（你需要往文件夹里放一张叫 avatar.jpg 的图片）
+      repo: 'wenan4/wenan4.github.io', // 右上角跳回 GitHub 的挂件
+
+      // ================= 目录设置 =================
+      loadSidebar: true, // 开启自定义侧边栏目录
+      subMaxLevel: 3,    // 自动提取每篇文章里的 1~3 级标题（#、##、###）作为右侧的小目录
+      auto2top: true,    // 切换页面后自动跳转回顶部
+
+      // 顺便帮你开启了右上角的搜索功能
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😞 找不到结果',
+        depth: 3
+      }
     }
   </script>
-  <!-- 引入 Docsify 的核心程序 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <!-- 引入 Docsify 核心脚本 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- 引入 Docsify 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <!-- 引入图片放大缩小插件（点图片可以放大） -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>
