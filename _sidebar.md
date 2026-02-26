@@ -2,6 +2,7 @@
 * 技术
   * [Markdown语法](/tech/markdown语法)
 * 动漫/漫画
+  * [EVA](/animation/eva.md)
   * [死亡笔记](/animation/dn)
 * 游戏
   * [fgo](/game/fgo)
