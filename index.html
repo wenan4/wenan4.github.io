@@ -95,6 +95,21 @@
       pointer-events: none;
       /* 保证遮罩不会阻挡点击事件 */
     }
+
+    /* ================= 6. 修改侧边栏折叠的箭头 ================= */
+    .sidebar-nav .folder-before::before,
+    .sidebar-nav .collapse::before {
+      color: #333 !important;
+      /* 改成深黑色，看得更清楚 */
+      font-size: 14px !important;
+      font-weight: bold !important;
+    }
+
+    /* 调整一下箭头的左右位置，防止和文字重叠 */
+    .app-sub-sidebar li::before {
+      content: '-';
+      padding-right: 5px;
+    }
   </style>
 </head>
 
@@ -120,16 +135,22 @@
       subMaxLevel: 3,    // 自动提取每篇文章里的 1~3 级标题（#、##、###）作为右侧的小目录
       auto2top: true,    // 切换页面后自动跳转回顶部
       sidebarDisplayLevel: 2, // 侧边栏默认只显示二级标题，三级标题需要点击展开
-      sidebarAccordion: false, // 强制禁用手风琴模式
-      //左上角的搜索功能
-      search: {
-        paths: 'auto',
-        placeholder: '搜索',
-        noData: '😞 找不到结果desuwa',
-        depth: 3
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md' // 确保深层文件夹也能找到目录
+      },
+      // 确保以下两个参数配置正确
+      sidebarCollapse: {
+        collapse: true,        // 开启折叠
+        showArrow: true,        // 确保显示箭头
+        //左上角的搜索功能
+        search: {
+          paths: 'auto',
+          placeholder: '搜索',
+          noData: '😞 找不到结果desuwa',
+          depth: 3
+        }
+
       }
-      
-    }
   </script>
 
   <!-- 语法高亮：Prism.js -->
