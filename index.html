@@ -10,12 +10,6 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/style.min.css" />
   <style>
-  /* 这里的自定义样式是为了让侧边栏的箭头更明显一点 */
-  .sidebar-nav li > p::after {
-    margin-top: 10px !important;
-  }
-  </style>
-  <style>
     /* ================= 1. 背景图片设置 ================= */
     body {
       /* 把 url() 里面的名字换成你的背景图片文件名，比如 aniya.jpg */
@@ -126,6 +120,7 @@
       subMaxLevel: 3,    // 自动提取每篇文章里的 1~3 级标题（#、##、###）作为右侧的小目录
       auto2top: true,    // 切换页面后自动跳转回顶部
       sidebarDisplayLevel: 2, // 侧边栏默认只显示二级标题，三级标题需要点击展开
+      sidebarAccordion: false, // 强制禁用手风琴模式
       //左上角的搜索功能
       search: {
         paths: 'auto',
