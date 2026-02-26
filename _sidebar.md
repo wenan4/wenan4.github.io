@@ -12,8 +12,10 @@
   * [fgo](/game/fgo.md)
 
 * 随笔
-  * [BPD](/varia/心理学/BPD.md)
-  * [福柯写的规训](/varia/哲学/福柯规训.md)
-  * [共时性](/varia/心理学/共时性.md)
-  * [荣格与心理类型](/varia/心理学/jungus.md)
-  * [加缪的伦理思想](/varia/哲学/加缪伦理.md)
+  * 心理学
+    * [BPD](/varia/心理学/BPD.md)
+    * [共时性](/varia/心理学/共时性.md)
+    * [荣格与心理类型](/varia/心理学/jungus.md)
+  * 哲学
+    * [加缪的伦理思想](/varia/哲学/加缪伦理.md)
+    * [福柯写的规训](/varia/哲学/福柯规训.md)
