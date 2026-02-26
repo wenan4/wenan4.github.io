@@ -1,21 +1,21 @@
 * [返回首页](/)
 * 技术
-  * [Markdown语法](/tech/markdown语法.md)
+  * [Markdown语法](/tech/markdown语法)
 * 动漫/漫画
-  * [死亡笔记](/animation/dn.md)
+  * [死亡笔记](/animation/dn)
 * 游戏
-  * [fgo](/game/fgo.md)
-  * [csgo](/game/csgo.md)
+  * [fgo](/game/fgo)
+  * [csgo](/game/csgo)
 * 随笔
   * 心理学
-    * [BPD](/varia/心理学/BPD.md)
-    * [依恋类型](/varia/心理学/依恋类型.md)
-    * [CPTSD](/varia/心理学/cptsd.md)
-    * [共时性](/varia/心理学/共时性.md)
-    * [荣格与心理类型](/varia/心理学/jungus.md)
+    * [BPD](/varia/心理学/BPD)
+    * [依恋类型](/varia/心理学/依恋类型)
+    * [CPTSD](/varia/心理学/cptsd)
+    * [共时性](/varia/心理学/共时性)
+    * [荣格与心理类型](/varia/心理学/jungus)
   * 哲学
-    * [加缪伦理思想](/varia/哲学/加缪伦理.md)
-    * [福柯规训理论](/varia/哲学/福柯规训.md)
+    * [加缪伦理思想](/varia/哲学/加缪伦理)
+    * [福柯规训理论](/varia/哲学/福柯规训)
   * 神秘学
-    * [塔罗](/varia/神秘学/tarot.md)
-    * [紫微斗数](/varia/神秘学/紫薇.md)
+    * [塔罗](/varia/神秘学/tarot)
+    * [紫微斗数](/varia/神秘学/紫薇)
