@@ -9,6 +9,8 @@
 * 随笔
   * 心理学
     * [BPD](/varia/心理学/BPD.md)
+    * [依恋类型](/varia/心理学/依恋类型.md)
+    * [CPTSD](/varia/心理学/cptsd.md)
     * [共时性](/varia/心理学/共时性.md)
     * [荣格与心理类型](/varia/心理学/jungus.md)
   * 哲学
