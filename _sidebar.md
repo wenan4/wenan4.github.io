@@ -10,3 +10,7 @@
 
 * 游戏
   * [fgo](/game/fgo.md)
+
+* 随笔
+  * [BPD](/varia/BPD.md)
+  * [福柯哲学](/varia/foucault.md)
