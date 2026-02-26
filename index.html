@@ -65,49 +65,36 @@
     }
 
     /* ================= 5. 修改侧边栏折叠的箭头 ================= */
-    .sidebar-nav .folder-before::before,
-    .sidebar-nav .collapse::before {
-      color: #333 !important;
-      font-size: 14px !important;
-      font-weight: bold !important;
-    }
-
-    .app-sub-sidebar li::before {
-      content: '-';
-      padding-right: 5px;
-    }
-
-    /* 1. 给有子目录的标题增加点击感 */
-    .sidebar-nav li>p {
+    /* 1. 给所有文件夹分类增加点击手感和相对定位 */
+    .sidebar-nav li.folder {
       cursor: pointer;
       position: relative;
-      padding-left: 20px !important;
-      /* 给左侧留出箭头的空间 */
     }
 
-    /* 2. 强制显示折叠状态下的箭头 (三角) */
-    .sidebar-nav li.collapse>p::before {
+    /* 2. 修正：直接给 li 增加内边距，留出箭头位置 */
+    .sidebar-nav li {
+      padding-left: 20px !important;
+      list-style: none;
+      /* 去掉默认的小圆点 */
+    }
+
+    /* 3. 强制显示折叠状态下的箭头 (三角) */
+    /* 注意：这里我们不再用 >p，而是直接作用于 li 或者里面的 span */
+    .sidebar-nav li.folder.collapse::before {
       content: '▶';
       position: absolute;
-      left: 0;
+      left: 5px;
       color: #666;
       font-size: 12px;
-      transition: transform 0.3s;
     }
 
-    /* 3. 强制显示展开状态下的箭头 (向下三角) */
-    .sidebar-nav li:not(.collapse)>p::before {
+    /* 4. 强制显示展开状态下的箭头 (向下三角) */
+    .sidebar-nav li.folder:not(.collapse)::before {
       content: '▼';
       position: absolute;
-      left: 0;
+      left: 5px;
       color: #42b983;
-      /* 展开时变绿色 */
       font-size: 12px;
-    }
-
-    /* 4. 隐藏插件自带的那个可能显示不出来的烂箭头 */
-    .sidebar-nav .folder-before::before {
-      display: none !important;
     }
   </style>
 </head>
@@ -125,7 +112,7 @@
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-      sidebarDisplayLevel: 2, // 刚才说到手风琴模式的问题，这里设为1，表示默认只展开第一级
+      sidebarDisplayLevel: 1, // 刚才说到手风琴模式的问题，这里设为1，表示默认只展开第一级
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
@@ -133,7 +120,7 @@
       // --- 核心修复：侧边栏插件配置 ---
       sidebarCollapse: {
         collapse: true,    // 启用折叠
-        showArrow: true,   // 显示箭头
+        showArrow: false,   // 显示箭头
         accordion: false   // 【关键】禁用手风琴模式，让各分类互不干扰
       },
 

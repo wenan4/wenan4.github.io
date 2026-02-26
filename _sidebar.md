@@ -1,14 +1,10 @@
 * [返回首页](/)
-
 * 技术
   * [Markdown语法](/tech/markdown语法.md)
-
 * 动漫/漫画
   * [死亡笔记](/animation/dn.md)
-
 * 游戏
   * [fgo](/game/fgo.md)
-
 * 随笔
   * 心理学
     * [BPD](/varia/心理学/BPD.md)
