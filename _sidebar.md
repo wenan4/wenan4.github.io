@@ -2,7 +2,7 @@
 * 技术
   * [Markdown语法](/tech/markdown语法)
 * 动漫/漫画
-  * [EVA](/animation/eva.md)
+  * [EVA](/animation/eva)
   * [死亡笔记](/animation/dn)
 * 游戏
   * [fgo](/game/fgo)
@@ -20,3 +20,6 @@
   * 神秘学
     * [塔罗](/varia/神秘学/tarot)
     * [紫微斗数](/varia/神秘学/紫薇)
+  * 月世界
+    * [介绍](/varia/月球史-月世界/README)
+    * [清少纳言](/varia/月球史-月世界/清少纳言)
