@@ -4,78 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <title>吻安です</title>
-  <link rel="icon" href="favicon.png" type="image/png"> <!-- 新增的 favicon，浏览器标签页logo -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 引入 Docsify 的主题 -->
+  <link rel="icon" href="favicon.png" type="image/png"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/style.min.css" />
   <style>
     /* ================= 1. 背景图片设置 ================= */
     body {
-      /* 把 url() 里面的名字换成你的背景图片文件名，比如 aniya.jpg */
       background-image: url('tezcatlipoca.png');
       background-size: cover;
-      /* 让图片铺满整个屏幕 */
       background-attachment: fixed;
-      /* 页面滚动时背景图不动 */
       background-position: center;
     }
 
     /* ================= 2. 头像样式设置 ================= */
-    /* 把左上角的方形头像变成圆角的，更好看 */
     .app-name-link img {
       width: 80px;
-      /* 头像大小 */
       border-radius: 50%;
-      /* 变成圆形 */
       margin-bottom: 10px;
     }
 
-    /* ================= 3. 音乐播放器位置 ================= */
-    /* 把音乐播放器固定在页面左下角 */
-    /*     #music-player {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 9999;
-      width: 260px;
-    } */
-
-    /* ================= 4. 修改正文字号 ================= */
-    /* .markdown-section 控制的是右边所有文章正文的显示效果 */
+    /* ================= 3. 修改正文字号 ================= */
     .markdown-section {
       font-size: 18px;
-      /* 默认大概是 15px，你可以改成 18px 或更大 */
       line-height: 1.6;
-      /* 顺便把行距调宽一点，阅读起来更舒服，不需要可以删掉 */
     }
+    .markdown-section h1 { font-size: 34px !important; }
+    .markdown-section h2 { font-size: 27px !important; }
+    .markdown-section h3 { font-size: 20px !important; }
 
-    /* 如果你觉得正文里的几级标题也需要跟着变大，可以加上这些： */
-    .markdown-section h1 {
-      font-size: 34px !important;
-    }
-
-    /* 一级标题 */
-    .markdown-section h2 {
-      font-size: 27px !important;
-    }
-
-    /* 二级标题 */
-    .markdown-section h3 {
-      font-size: 20px !important;
-    }
-
-    /* 三级标题 */
-
-
-    /* ================= 5. 修改左侧目录字号 ================= */
-    /* .sidebar-nav 控制的是左边整个目录栏的文字 */
+    /* ================= 4. 修改左侧目录字号 ================= */
     .sidebar ul li a {
       font-size: 17px !important;
-      /* 默认通常是 14px，你可以适当改大 */
     }
-
-    /* 顺便调整一下目录里每一行的上下间距，避免字变大后挤在一起 */
     .sidebar-nav li {
       margin: 6px 0;
     }
@@ -89,23 +49,17 @@
       width: 100%;
       height: 100%;
       background-color: rgba(255, 255, 255, 0.85);
-      /* 透明度可自行调整 */
       z-index: -1;
-      /* 让遮罩位于内容下方，但背景图片上方 */
       pointer-events: none;
-      /* 保证遮罩不会阻挡点击事件 */
     }
 
-    /* ================= 6. 修改侧边栏折叠的箭头 ================= */
+    /* ================= 5. 修改侧边栏折叠的箭头 ================= */
     .sidebar-nav .folder-before::before,
     .sidebar-nav .collapse::before {
       color: #333 !important;
-      /* 改成深黑色，看得更清楚 */
       font-size: 14px !important;
       font-weight: bold !important;
     }
-
-    /* 调整一下箭头的左右位置，防止和文字重叠 */
     .app-sub-sidebar li::before {
       content: '-';
       padding-right: 5px;
@@ -115,64 +69,50 @@
 
 <body>
   <div id="app">网页加载中，请稍候...</div>
-  <!-- 
-  <!-- ================= 音乐播放器 ================= -->
-  <!-- controls 表示显示播放面板，loop 表示循环播放 -->
-  <!--   <audio id="music-player" controls loop> -->
-  <!-- 把这里的 src 换成你的本地音乐文件名，比如 music.mp3 -->
-  <!--  <source src="你的音乐链接.mp3" type="audio/mpeg"> -->
-  <!--   </audio> -->
 
   <script>
     window.$docsify = {
       // ================= 基础信息设置 =================
-      //用 HTML 标签把图片和文字拼在一起！
-      // <br> 的意思是换行，这样名字就会显示在图片的下方
       name: '<img src="neko.png"><br>吻安的主页',
-      repo: 'wenan4/wenan4.github.io', // 保持不变
+      repo: 'wenan4/wenan4.github.io', 
+      
       // ================= 目录设置 =================
-      loadSidebar: true, // 开启自定义侧边栏目录
-      subMaxLevel: 3,    // 自动提取每篇文章里的 1~3 级标题（#、##、###）作为右侧的小目录
-      auto2top: true,    // 切换页面后自动跳转回顶部
-      sidebarDisplayLevel: 2, // 侧边栏默认只显示二级标题，三级标题需要点击展开
+      loadSidebar: true, 
+      subMaxLevel: 3,    
+      auto2top: true,    
+      sidebarDisplayLevel: 1, // 刚才说到手风琴模式的问题，这里设为1，表示默认只展开第一级
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md' // 确保深层文件夹也能找到目录
+        '/.*/_sidebar.md': '/_sidebar.md' 
       },
-      // 确保以下两个参数配置正确
+      
+      // ================= 折叠插件配置 =================
       sidebarCollapse: {
-        collapse: true,        // 开启折叠
-        showArrow: true,        // 确保显示箭头
-        //左上角的搜索功能
-        search: {
-          paths: 'auto',
-          placeholder: '搜索',
-          noData: '😞 找不到结果desuwa',
-          depth: 3
-        }
+        collapse: true,        
+        showArrow: true        
+      },
 
+      // ================= 搜索功能 =================
+      search: {
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '😞 找不到结果desuwa',
+        depth: 3
       }
+    };
   </script>
 
-  <!-- 语法高亮：Prism.js -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" />
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
-  <!-- 如果需要更多语言，可以继续添加，例如 bash、javascript 等 -->
 
-  <!-- 引入 Docsify 核心脚本 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <!-- 引入 Docsify 搜索插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <!-- 引入图片放大缩小插件（点图片可以放大） -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- 新增：侧边栏折叠插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- KaTeX 数学公式支持 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
   <script src="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
-  <!-- docsify-katex 插件，让 Docsify 解析 $$ 公式 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@1/dist/docsify-katex.min.js"></script>
 </body>
 
