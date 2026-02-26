@@ -2,13 +2,11 @@
 
 * [返回首页](/)
 
-<!-- * 📚 学习笔记系列
-  * [HTML 基础](/notes/html-basics.md)
-  * [Git 踩坑记录](/notes/git-errors.md)
-
-* 🎮 游戏攻略
-  * [塞尔达通关指南](/games/zelda.md) -->
-
-
 * 技术
   * [Markdown语法](/tech/markdown语法.md)
+
+* 动漫/漫画
+  * [死亡笔记](/animation/dn.md)
+
+* 游戏
+  * [fgo](/game/fgo.md)
