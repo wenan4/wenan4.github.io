@@ -34,7 +34,8 @@ or
 [id]:图片地址
 
 `代码文本`
+
 ```python
-print("这是一个python代码块")
+print("这是一个python代码块")```
 
 $$ F=G \frac{Mm}{R^2} $$

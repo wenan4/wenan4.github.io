@@ -101,11 +101,24 @@
     }
   </script>
   
+  <!-- 语法高亮：Prism.js -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" />
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+  <!-- 如果需要更多语言，可以继续添加，例如 bash、javascript 等 -->
+
   <!-- 引入 Docsify 核心脚本 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <!-- 引入 Docsify 搜索插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <!-- 引入图片放大缩小插件（点图片可以放大） -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <!-- KaTeX 数学公式支持 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
+  <!-- docsify-katex 插件，让 Docsify 解析 $$ 公式 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@1/dist/docsify-katex.min.js"></script>
 </body>
 </html>
