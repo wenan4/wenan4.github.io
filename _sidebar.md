@@ -5,6 +5,7 @@
   * [死亡笔记](/animation/dn.md)
 * 游戏
   * [fgo](/game/fgo.md)
+  * [csgo](/game/csgo.md)
 * 随笔
   * 心理学
     * [BPD](/varia/心理学/BPD.md)
