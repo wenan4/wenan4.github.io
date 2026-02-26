@@ -1,7 +1,6 @@
 <!-- 这是一个最简单的无序列表，Docsify 会自动把它转换成左侧菜单 -->
 
 * [🏠 返回首页](/)
-<!-- * [📝 我的readme](/README.md) -->
 
 <!-- * 📚 学习笔记系列
   * [HTML 基础](/notes/html-basics.md)
