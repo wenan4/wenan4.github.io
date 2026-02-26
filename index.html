@@ -7,7 +7,6 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/style.min.css" />
   <style>
     /* ================= 1. 背景图片设置 ================= */
     body {
@@ -63,39 +62,6 @@
       z-index: -1;
       pointer-events: none;
     }
-
-    /* ================= 5. 修改侧边栏折叠的箭头 ================= */
-    /* 1. 给所有文件夹分类增加点击手感和相对定位 */
-    .sidebar-nav li.folder {
-      cursor: pointer;
-      position: relative;
-    }
-
-    /* 2. 修正：直接给 li 增加内边距，留出箭头位置 */
-    .sidebar-nav li {
-      padding-left: 20px !important;
-      list-style: none;
-      /* 去掉默认的小圆点 */
-    }
-
-    /* 3. 强制显示折叠状态下的箭头 (三角) */
-    /* 注意：这里我们不再用 >p，而是直接作用于 li 或者里面的 span */
-    .sidebar-nav li.folder.collapse::before {
-      content: '▶';
-      position: absolute;
-      left: 5px;
-      color: #666;
-      font-size: 12px;
-    }
-
-    /* 4. 强制显示展开状态下的箭头 (向下三角) */
-    .sidebar-nav li.folder:not(.collapse)::before {
-      content: '▼';
-      position: absolute;
-      left: 5px;
-      color: #42b983;
-      font-size: 12px;
-    }
   </style>
 </head>
 
@@ -112,18 +78,6 @@
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-      sidebarDisplayLevel: 2, //默认展开第2级
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
-
-      // --- 核心修复：侧边栏插件配置 ---
-      sidebarCollapse: {
-        collapse: true,    // 启用折叠
-        showArrow: false,   // 显示箭头
-        accordion: false   // 【关键】禁用手风琴模式，让各分类互不干扰
-      },
-
       // ================= 搜索功能 =================
       search: {
         paths: 'auto',
@@ -143,7 +97,6 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
   <script src="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@1/dist/docsify-katex.min.js"></script>
