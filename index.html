@@ -52,15 +52,15 @@
     }
 
     /* 如果你觉得正文里的几级标题也需要跟着变大，可以加上这些： */
-    .markdown-section h1 { font-size: 28px; } /* 一级标题 */
-    .markdown-section h2 { font-size: 24px; } /* 二级标题 */
-    .markdown-section h3 { font-size: 20px; } /* 三级标题 */
+    .markdown-section h1 { font-size: 28px !important; } /* 一级标题 */
+    .markdown-section h2 { font-size: 24px !important; } /* 二级标题 */
+    .markdown-section h3 { font-size: 20px !important; } /* 三级标题 */
 
 
     /* ================= 5. 修改左侧目录字号 ================= */
     /* .sidebar-nav 控制的是左边整个目录栏的文字 */
-    .sidebar-nav {
-      font-size: 17px; /* 默认通常是 14px，你可以适当改大 */
+    .sidebar ul li a {
+      font-size: 17px !important; /* 默认通常是 14px，你可以适当改大 */
     }
     
     /* 顺便调整一下目录里每一行的上下间距，避免字变大后挤在一起 */
