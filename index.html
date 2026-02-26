@@ -43,6 +43,30 @@
       z-index: 9999;
       width: 260px;
     } */
+
+        /* ================= 4. 修改正文字号 ================= */
+    /* .markdown-section 控制的是右边所有文章正文的显示效果 */
+    .markdown-section {
+      font-size: 18px; /* 默认大概是 15px，你可以改成 18px 或更大 */
+      line-height: 1.8; /* 顺便把行距调宽一点，阅读起来更舒服，不需要可以删掉 */
+    }
+
+    /* 如果你觉得正文里的几级标题也需要跟着变大，可以加上这些： */
+    .markdown-section h1 { font-size: 28px; } /* 一级标题 */
+    .markdown-section h2 { font-size: 24px; } /* 二级标题 */
+    .markdown-section h3 { font-size: 20px; } /* 三级标题 */
+
+
+    /* ================= 5. 修改左侧目录字号 ================= */
+    /* .sidebar-nav 控制的是左边整个目录栏的文字 */
+    .sidebar-nav {
+      font-size: 16px; /* 默认通常是 14px，你可以适当改大 */
+    }
+    
+    /* 顺便调整一下目录里每一行的上下间距，避免字变大后挤在一起 */
+    .sidebar-nav li {
+      margin: 8px 0; 
+    }
   </style>
 </head>
 <body>
