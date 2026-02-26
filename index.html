@@ -8,7 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 引入 Docsify 的主题 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-folding/dist/sidebar-folding.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/style.min.css" />
+  <style>
+  /* 这里的自定义样式是为了让侧边栏的箭头更明显一点 */
+  .sidebar-nav li > p::after {
+    margin-top: 10px !important;
+  }
+  </style>
   <style>
     /* ================= 1. 背景图片设置 ================= */
     body {
@@ -146,7 +152,7 @@
   <!-- 引入图片放大缩小插件（点图片可以放大） -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 新增：侧边栏折叠插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-folding/dist/sidebar-folding.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <!-- KaTeX 数学公式支持 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
   <script src="//cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
