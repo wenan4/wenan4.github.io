@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>吻安です</title>
-  <link rel="icon" href="favicon.png" type="image/png"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/style.min.css" />
   <style>
@@ -28,14 +29,24 @@
       font-size: 18px;
       line-height: 1.6;
     }
-    .markdown-section h1 { font-size: 34px !important; }
-    .markdown-section h2 { font-size: 27px !important; }
-    .markdown-section h3 { font-size: 20px !important; }
+
+    .markdown-section h1 {
+      font-size: 34px !important;
+    }
+
+    .markdown-section h2 {
+      font-size: 27px !important;
+    }
+
+    .markdown-section h3 {
+      font-size: 20px !important;
+    }
 
     /* ================= 4. 修改左侧目录字号 ================= */
     .sidebar ul li a {
       font-size: 17px !important;
     }
+
     .sidebar-nav li {
       margin: 6px 0;
     }
@@ -60,9 +71,43 @@
       font-size: 14px !important;
       font-weight: bold !important;
     }
+
     .app-sub-sidebar li::before {
       content: '-';
       padding-right: 5px;
+    }
+
+    /* 1. 给有子目录的标题增加点击感 */
+    .sidebar-nav li>p {
+      cursor: pointer;
+      position: relative;
+      padding-left: 20px !important;
+      /* 给左侧留出箭头的空间 */
+    }
+
+    /* 2. 强制显示折叠状态下的箭头 (三角) */
+    .sidebar-nav li.collapse>p::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #666;
+      font-size: 12px;
+      transition: transform 0.3s;
+    }
+
+    /* 3. 强制显示展开状态下的箭头 (向下三角) */
+    .sidebar-nav li:not(.collapse)>p::before {
+      content: '▼';
+      position: absolute;
+      left: 0;
+      color: #42b983;
+      /* 展开时变绿色 */
+      font-size: 12px;
+    }
+
+    /* 4. 隐藏插件自带的那个可能显示不出来的烂箭头 */
+    .sidebar-nav .folder-before::before {
+      display: none !important;
     }
   </style>
 </head>
@@ -74,21 +119,22 @@
     window.$docsify = {
       // ================= 基础信息设置 =================
       name: '<img src="neko.png"><br>吻安的主页',
-      repo: 'wenan4/wenan4.github.io', 
-      
+      repo: 'wenan4/wenan4.github.io',
+
       // ================= 目录设置 =================
-      loadSidebar: true, 
-      subMaxLevel: 3,    
-      auto2top: true,    
-      sidebarDisplayLevel: 1, // 刚才说到手风琴模式的问题，这里设为1，表示默认只展开第一级
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      sidebarDisplayLevel: 2, // 刚才说到手风琴模式的问题，这里设为1，表示默认只展开第一级
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md' 
+        '/.*/_sidebar.md': '/_sidebar.md'
       },
-      
-      // ================= 折叠插件配置 =================
+
+      // --- 核心修复：侧边栏插件配置 ---
       sidebarCollapse: {
-        collapse: true,        
-        showArrow: true        
+        collapse: true,    // 启用折叠
+        showArrow: true,   // 显示箭头
+        accordion: false   // 【关键】禁用手风琴模式，让各分类互不干扰
       },
 
       // ================= 搜索功能 =================
