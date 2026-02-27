@@ -3,7 +3,7 @@
   * [Markdown语法](/tech/markdown语法)
 * 动漫/漫画
   * [EVA](/animation/eva)
-  * [死亡笔记](/animation/dn)
+  * [杂评](/animation/杂)
 * 游戏
   * [fgo](/game/fgo)
   * [csgo](/game/csgo)
