@@ -7,6 +7,7 @@
 * 游戏
   * [fgo](/game/fgo)
   * [csgo](/game/csgo)
+  * [p5r](/game/p5r)
 * 随笔
   * 心理学
     * [BPD](/varia/心理学/BPD)
