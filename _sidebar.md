@@ -6,7 +6,6 @@
   * [杂评](/animation/杂)
 * 游戏
   * [fgo](/game/fgo)
-  * [csgo](/game/csgo)
   * [p5r](/game/p5r)
 * 心理学
   * [弗洛伊德-荣格-阿德勒](/心理学/弗洛伊德-荣格-阿德勒)
