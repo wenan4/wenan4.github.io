@@ -1,12 +1,27 @@
 /* Preserve the original fixed illustration and translucent white veil.
    Starlight continues to own columns, navigation and responsive breakpoints. */
 :root {
+  --site-font-heading: 'Source Han Sans SC', '思源黑体', sans-serif;
+  --site-font-body: 'Source Han Serif SC', '思源宋体', serif;
+  --sl-font: var(--site-font-heading);
+  --sl-color-accent-low: #49391f;
+  --sl-color-accent: #dbb95e;
+  --sl-color-accent-high: #f6e3a9;
+  --sl-color-text-accent: #f6e3a9;
+  --sl-color-text-invert: #3e3017;
+  --sl-color-bg-accent: #f6e3a9;
   --sl-color-bg: #171a20;
   --sl-color-bg-nav: rgba(23, 26, 32, 0.96);
   --sl-color-bg-sidebar: rgba(23, 26, 32, 0.94);
   --site-veil: rgba(23, 26, 32, 0.94);
 }
 :root[data-theme='light'] {
+  --sl-color-accent-low: #fff7dc;
+  --sl-color-accent: #94651d;
+  --sl-color-accent-high: #5f421b;
+  --sl-color-text-accent: #80571d;
+  --sl-color-text-invert: #4c3718;
+  --sl-color-bg-accent: #f7e7ad;
   --sl-color-bg: #fff;
   --sl-color-bg-nav: rgba(255, 255, 255, 0.95);
   --sl-color-bg-sidebar: rgba(255, 255, 255, 0.92);
@@ -20,7 +35,39 @@ body {
   background-repeat: no-repeat;
 }
 .site-title img { border-radius: 50%; }
-.sl-markdown-content { font-size: 18px; overflow-wrap: anywhere; }
+.sl-markdown-content {
+  font-family: var(--site-font-body);
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+:is(h1, h2, h3, h4, h5, h6),
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--site-font-heading);
+}
+/* Keep category counts as quiet, unboxed text at every nesting level. */
+.sidebar-content .sl-badge {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.875em;
+  font-weight: 400;
+  vertical-align: baseline;
+}
+.sidebar-content .sl-badge::before { content: '（'; }
+.sidebar-content .sl-badge::after { content: '）'; }
+/* Pale yellow selection with dark text, including Starlight's active nav row. */
+.sidebar-content a[aria-current='page'] {
+  color: var(--sl-color-text-invert);
+  background-color: var(--sl-color-bg-accent);
+}
+::selection { color: #4c3718; background: #f7e7ad; }
+.pagefind-ui {
+  --pagefind-ui-primary: var(--sl-color-text-accent);
+  --pagefind-ui-font: var(--site-font-heading);
+}
 .sl-markdown-content :is(pre, .katex-display) { overflow-x: auto; }
 .sl-markdown-content table { display: block; max-width: 100%; overflow-x: auto; }
 @media (max-width: 49.99rem) {

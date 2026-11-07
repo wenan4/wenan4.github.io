@@ -32,7 +32,7 @@ export default defineConfig({
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/wenan4/wenan4.github.io' }],
       sidebar: catalog.sidebar,
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
-      customCss: ['katex/dist/katex.min.css', './src/styles/custom.css'],
+      customCss: ['katex/dist/katex.min.css', './src/styles/fonts.css', './src/styles/custom.css'],
       head: [{ tag: 'script', attrs: { src: '/legacy-redirect.js', defer: true } }],
     }),
   ],

@@ -1,0 +1,17 @@
+/* Unmodified Adobe Source Han CN variable fonts, self-hosted under OFL 1.1.
+   Full character coverage also applies to future articles; no per-page subsets.
+   See public/fonts/README.txt and the included licenses. */
+@font-face {
+  font-family: 'Source Han Sans SC';
+  font-style: normal;
+  font-weight: 250 900;
+  font-display: swap;
+  src: url('/fonts/source-han-sans-cn.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-style: normal;
+  font-weight: 250 900;
+  font-display: swap;
+  src: url('/fonts/source-han-serif-cn.woff2') format('woff2');
+}

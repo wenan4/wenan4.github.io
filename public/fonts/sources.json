@@ -1,0 +1,14 @@
+[
+  {
+    "file": "source-han-sans-cn.woff2",
+    "source": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/release/Variable/WOFF2/TTF/Subset/SourceHanSansCN-VF.ttf.woff2",
+    "bytes": 7711988,
+    "sha256": "f971e3bff46f76b49e1d5510556c2297c618ec4b491a295a4e741cdd38257799"
+  },
+  {
+    "file": "source-han-serif-cn.woff2",
+    "source": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/release/Variable/WOFF2/TTF/Subset/SourceHanSerifCN-VF.ttf.woff2",
+    "bytes": 11035128,
+    "sha256": "556749ba783b148fa1f48644e8883e5b9351f01abd0d1faad0ba24a21185e76a"
+  }
+]
