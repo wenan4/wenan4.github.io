@@ -1,0 +1,28 @@
+/* Preserve the original fixed illustration and translucent white veil.
+   Starlight continues to own columns, navigation and responsive breakpoints. */
+:root {
+  --sl-color-bg: #171a20;
+  --sl-color-bg-nav: rgba(23, 26, 32, 0.96);
+  --sl-color-bg-sidebar: rgba(23, 26, 32, 0.94);
+  --site-veil: rgba(23, 26, 32, 0.94);
+}
+:root[data-theme='light'] {
+  --sl-color-bg: #fff;
+  --sl-color-bg-nav: rgba(255, 255, 255, 0.95);
+  --sl-color-bg-sidebar: rgba(255, 255, 255, 0.92);
+  --site-veil: rgba(255, 255, 255, 0.85);
+}
+body {
+  background-image: linear-gradient(var(--site-veil), var(--site-veil)), url('/tezcatlipoca.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.site-title img { border-radius: 50%; }
+.sl-markdown-content { font-size: 18px; overflow-wrap: anywhere; }
+.sl-markdown-content :is(pre, .katex-display) { overflow-x: auto; }
+.sl-markdown-content table { display: block; max-width: 100%; overflow-x: auto; }
+@media (max-width: 49.99rem) {
+  .sl-markdown-content { font-size: 16px; }
+}

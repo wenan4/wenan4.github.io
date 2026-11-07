@@ -1,0 +1,14 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+---
+
+<StarlightPage frontmatter={{
+  title: '页面未找到', template: 'splash', pagefind: false,
+  head: [
+    { tag: 'link', attrs: { rel: 'canonical', href: 'https://wenan4.github.io/404.html' } },
+    { tag: 'meta', attrs: { name: 'robots', content: 'noindex' } },
+  ],
+}}>
+  <p>页面不存在，或文章暂时没有正文。</p>
+  <p><a href="/">返回首页</a></p>
+</StarlightPage>
