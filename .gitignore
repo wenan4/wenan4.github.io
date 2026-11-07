@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+src/content/docs/
+src/generated/
+public/legacy-routes.json
+public/content/
+.playwright-cli/
+output/
+*.log
